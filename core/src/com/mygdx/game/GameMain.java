@@ -1,32 +1,29 @@
-package com.game.jackthegiant;
+package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import scenes.Gameplay;
+import helpers.GameManager;
+import scenes.MainMenu;
+
+
+/**
+ * Created by Luca on 08/04/2018.
+ */
 
 public class GameMain extends Game {
 	private SpriteBatch batch;
-	Texture img;
-	
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		setScreen(new Gameplay(this));
-	}
+		GameManager.getInstance().initializeGameData();
+		setScreen(new MainMenu(this));
+  	}
 
 	@Override
 	public void render () {
 		super.render();
-	}
-	
-	@Override
-	public void dispose () {
-		batch.dispose();
-		img.dispose();
 	}
 
 	public SpriteBatch getBatch(){

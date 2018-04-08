@@ -1,10 +1,10 @@
-package com.game.jackthegiant;
+package com.mygdx.game;
 
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.game.jackthegiant.GameMain;
+import com.mygdx.game.GameMain;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
